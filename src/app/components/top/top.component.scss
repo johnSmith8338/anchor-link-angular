@@ -22,11 +22,25 @@ img {
   object-fit: cover;
 }
 
+.text {
+  display: grid;
+
+  @media (max-width:1024px) {
+    p {
+      order: 2;
+    }
+  }
+}
+
 .button-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
+
+  @media (max-width:1024px) {
+    order: 1;
+  }
 
   span {
     font-size: 0.6rem;

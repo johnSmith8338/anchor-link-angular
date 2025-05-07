@@ -12,18 +12,11 @@ p {
   margin-inline: auto;
 }
 
-.img-block {
+.wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  align-items: center;
   justify-content: center;
-  overflow: clip;
-
-  img {
-    max-height: 150px;
-    max-width: min(390px, 100%);
-    object-fit: cover;
-  }
 }
 
 .button-wrapper {
@@ -31,11 +24,25 @@ p {
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
-  justify-content: flex-end;
-  padding-block-start: 2em;
+  padding: 0.5em 2em;
+  background: #000;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(2rem);
+
+  &.visible {
+    animation: 0.5s fadeIn 0.5s ease-out forwards;
+  }
 
   span {
     font-size: 0.6rem;
     text-transform: uppercase;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
