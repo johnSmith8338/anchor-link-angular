@@ -1,7 +1,9 @@
+<!-- Якорный элемент и отслеживаемая секция -->
 <div id="bottomComponent" #sectionRoot></div>
 <h2>Title in BottomComponent</h2>
 <div class="wrapper">
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, eius repudiandae? Eum unde, dignissimos recusandae consectetur voluptatum dicta eveniet veritatis.</p>
+    <!-- Появляется при попадании в viewport -->
     <div class="button-wrapper" *ngIf="isVisible()" [class.visible]="isVisible()">
         <button (click)="scrollToTop()">scroll</button>
         <span>Scroll to Top</span>
