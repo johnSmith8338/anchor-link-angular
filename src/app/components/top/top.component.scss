@@ -1,0 +1,35 @@
+:host {
+  display: block;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.img-wrapper {
+  position: relative;
+  min-height: 320px;
+  overflow: clip;
+}
+
+img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+
+  span {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+  }
+}

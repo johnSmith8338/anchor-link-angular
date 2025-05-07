@@ -1,0 +1,41 @@
+:host {
+  display: block;
+  padding-block-end: 4em;
+}
+
+h2 {
+  margin-block-start: 4em;
+}
+
+p {
+  max-width: 65ch;
+  margin-inline: auto;
+}
+
+.img-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  overflow: clip;
+
+  img {
+    max-height: 150px;
+    max-width: min(390px, 100%);
+    object-fit: cover;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-end;
+  padding-block-start: 2em;
+
+  span {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+  }
+}
